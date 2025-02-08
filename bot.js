@@ -1,5 +1,8 @@
 const wppconnect = require('@wppconnect-team/wppconnect');
 
+// Configuração para usar o Chromium instalado no sistema
+process.env.PUPPETEER_EXECUTABLE_PATH = '/usr/bin/chromium-browser';
+
 // Inicializa o cliente do WhatsApp
 wppconnect.create()
     .then((client) => start(client))
